@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  coredns:
+    image: coredns/coredns
+    volumes:
+      - ./coredns/:/root/
+    ports:
+     - 52:53/udp
