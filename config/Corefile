@@ -6,7 +6,7 @@
 }
 
 example.com:53 {
-    file /etc/coredns/example.com.db
+    file /config/example.com.db
     log
     errors
     reload 10s
