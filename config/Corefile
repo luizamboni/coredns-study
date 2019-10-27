@@ -1,0 +1,13 @@
+.:53 {
+    forward . 8.8.8.8:53
+    log
+    errors
+    reload 10s
+}
+
+example.com:53 {
+    file /etc/coredns/example.com.db
+    log
+    errors
+    reload 10s
+}

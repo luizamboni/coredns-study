@@ -4,6 +4,9 @@ services:
   coredns:
     image: coredns/coredns
     volumes:
-      - ./coredns/:/root/
+      - ./config/:/config/
     ports:
      - 52:53/udp
+    command: -conf /config/Corefile
+
+    # rwasniak/work/src/github.com/miekg/coredns$ docker run -v "/Conf:/Conf" bob/coredns -conf /Conf/C
