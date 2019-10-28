@@ -1,0 +1,21 @@
+example.com {
+    reload 2s
+    file /config/example.com.db
+    log
+    errors
+}
+
+# to resolve external domains
+. {
+    forward . 8.8.8.8:53
+    log
+    errors
+    reload 10s
+}
+
+# to exerciciosresolvidos.net forward to secondary dns service
+exerciciosresolvidos.net {
+    forward . 10.5.0.3:53
+    log 
+    errors
+}

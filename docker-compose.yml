@@ -1,12 +1,31 @@
 version: '3.7'
 
 services:
-  coredns:
+  primary:
     image: coredns/coredns
     volumes:
-      - ./config/:/config/
+      - ./configs/primary:/config/
     ports:
-     - 52:53/udp
+     - 54:53/udp
     command: -conf /config/Corefile
+    networks:
+      localvpc:
+        ipv4_address: 10.5.0.2
 
-    # rwasniak/work/src/github.com/miekg/coredns$ docker run -v "/Conf:/Conf" bob/coredns -conf /Conf/C
+  secondary:
+    image: coredns/coredns
+    volumes:
+      - ./configs/secondary:/config/
+    ports:
+     - 55:53/udp
+    command: -conf /config/Corefile
+    networks:
+      localvpc:
+        ipv4_address: 10.5.0.3
+
+networks:
+  localvpc:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
