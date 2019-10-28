@@ -23,6 +23,17 @@ services:
       localvpc:
         ipv4_address: 10.5.0.3
 
+  by-host:
+    image: coredns/coredns
+    volumes:
+      - ./configs/by-host:/config/
+    ports:
+     - 56:53/udp
+    command: -conf /config/Corefile
+    networks:
+      localvpc:
+        ipv4_address: 10.5.0.4
+
 
 networks:
   localvpc:

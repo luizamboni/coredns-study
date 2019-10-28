@@ -1,0 +1,2 @@
+10.0.0.1 host1.bar.example
+10.0.1.1 host2.bar.example cname.bar.example
