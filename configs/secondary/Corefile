@@ -1,14 +1,16 @@
 exerciciosresolvidos.net {
-    reload 2s
+    file /config/exerciciosresolvidos.net.db {
+        transfer to *
+        reload 2s
 
-    file /config/exerciciosresolvidos.net.db
+    }
     log
     errors
 }
 
-
-example.net {
-    forward . 10.5.0.2:53
-    log 
-    errors
+example.com {
+    secondary {
+        # get zone data from 
+        transfer from 10.5.0.2
+    }
 }

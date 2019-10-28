@@ -1,6 +1,6 @@
 ; wwww.exerciciosresolvidos.net
 ; your@example.com turn in your.email.com
-@                    IN  SOA   www.exerciciosresolvidos.net.  your.email.com. (
+@                    IN  SOA   dns.exerciciosresolvidos.net.  your.email.com. (
         2015082542  ; serial
         7200        ; refresh
         3600        ; retry
@@ -9,6 +9,10 @@
     )
                     IN A 192.168.1.1
 
+; dns ip
+dns.exerciciosresolvidos.net     IN  A       10.5.0.3
+
+
 ; multiple ips for a domain
 test.exerciciosresolvidos.net.   IN  A       192.168.1.1
                                  IN  A       192.168.1.2
@@ -16,7 +20,3 @@ test.exerciciosresolvidos.net.   IN  A       192.168.1.1
 
                                  IN  AAAA    2804:14d:5cde:440f:bd45:e882:c3eb:413b
                                  IN  AAAA    2804:14d:5cde:440f:bd45:e882:c3eb:413c
-
-; not authoritive
-latex.exerciciosresolvidos.net.    IN NS  anuj.ns.cloudflare.com.
-                                   IN NS  tani.ns.cloudflare.com.

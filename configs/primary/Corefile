@@ -1,21 +1,15 @@
 example.com {
-    reload 2s
-    file /config/example.com.db
+    file /config/example.com.db {
+        # accept to transfer this zone data to
+        transfer to * # anyone
+        reload 2s
+    }
     log
     errors
 }
 
-# to resolve external domains
-. {
-    forward . 8.8.8.8:53
-    log
-    errors
-    reload 10s
-}
-
-# to exerciciosresolvidos.net forward to secondary dns service
 exerciciosresolvidos.net {
-    forward . 10.5.0.3:53
-    log 
-    errors
+    secondary {
+        transfer from 10.5.0.3
+    }
 }

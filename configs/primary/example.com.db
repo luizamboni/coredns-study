@@ -1,13 +1,15 @@
 ; SOA record
 ; your@example.com turn in your.email.com
-@                   IN  SOA   example.com. your.email.com. (
+@                   IN  SOA   dns.example.com. your.email.com. (
                         2015082541  ; serial
                         7200        ; refresh
                         3600        ; retry
                         1209600     ; expire
                         3600        ; minimun
                     )
-                     IN A 192.168.1.1
+                      IN A 192.168.1.1
+
+dns.example.com.      IN A    10.5.0.2
 
 ; multiple ips for a domain
 host.example.com.     IN  A       192.168.1.1
