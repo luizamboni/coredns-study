@@ -1,0 +1,8 @@
+example {
+    auto {
+        directory /config/zones (.*)\.zone {1}
+    }
+    log
+    errors
+}
+
