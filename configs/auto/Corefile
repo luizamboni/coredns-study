@@ -1,4 +1,7 @@
 example {
+    ready
+    loadbalance round_robin
+    health
     auto {
         directory /config/zones (.*)\.zone {1}
     }

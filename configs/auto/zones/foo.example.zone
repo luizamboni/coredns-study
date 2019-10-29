@@ -10,4 +10,8 @@
                       IN A 192.168.1.1
 
 dns.foo.example       IN A 10.5.0.5
+
 a.foo.example.        IN A 10.5.0.2
+                      IN A 10.5.0.3
+                      IN A 10.5.0.4
+                      IN A 10.5.0.5
