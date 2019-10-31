@@ -1,4 +1,4 @@
-example {
+. {
     ready
     loadbalance round_robin
     health

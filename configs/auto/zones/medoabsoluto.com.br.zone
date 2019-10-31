@@ -1,17 +1,13 @@
 ; SOA record
 ; your@example.com turn in your.email.com
-@                   IN  SOA   dns.bar.example. your.email.com. (
+@                   IN  SOA   dns.medoabsoluto.com.br. luizamboni2002.hotmail.com. (
                         2015082541  ; serial
                         7200        ; refresh
                         3600        ; retry
                         1209600     ; expire
                         3600        ; minimun
                     )
-                      IN A 192.168.1.1
+                      IN A 104.225.216.107
 
-dns.bar.example.       IN A 10.5.0.5
-
-a.bar.example.        IN A 10.5.0.2
-                      IN A 10.5.0.3
-                      IN A 10.5.0.4
-                      IN A 10.5.0.5
+dns.medoabsoluto.com.br.   IN A 104.225.216.107
+www.medoabsoluto.com.br.   IN A 104.225.216.107
